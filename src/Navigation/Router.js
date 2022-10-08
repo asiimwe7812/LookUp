@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AreaSearch from '../Screens/AreaSearch';
 import Searchresult from '../Screens/Searchresult';
 import ButtonNavigator from './ButtomNavigator';
+import SearchResultTab from './SearchResultTabNavigator';
 const Stack = createNativeStackNavigator();
 const Router = props => {
   return (
@@ -16,7 +17,7 @@ const Router = props => {
           component={ButtonNavigator}
         />
         <Stack.Screen name={'Search for free Places'} component={AreaSearch} />
-        <Stack.Screen name={'New Places'} component={Searchresult} />
+        <Stack.Screen name={'New Places'} component={SearchResultTab} />
       </Stack.Navigator>
     </NavigationContainer>
   );

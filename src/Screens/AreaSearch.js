@@ -3,10 +3,22 @@ import React, {useState} from 'react';
 import {TextInput, View, StyleSheet, FlatList, Text} from 'react-native';
 import searchdata from '../../assets/data/searchdata';
 import Entypo from 'react-native-vector-icons/Entypo';
+import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 const AreaSearch = () => {
   const [inputText, setInputText] = useState('');
   return (
     <View style={styles.container}>
+      <GooglePlacesAutocomplete
+        placeholder="Search"
+        onPress={(data, details = null) => {
+          // 'details' is provided when fetchDetails = true
+          console.log(data, details);
+        }}
+        query={{
+          key: 'AIzaSyAXLPrwr6PJIe_PwBgx4qow5xvC0ude8G8',
+          language: 'en',
+        }}
+      />
       <TextInput
         style={styles.textInput}
         value={inputText}
@@ -35,6 +47,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 18,
+    marginTop: 40,
   },
   row: {
     flexDirection: 'row',
