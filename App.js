@@ -9,11 +9,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import {StatusBar} from 'react-native';
-// import HomeScreen from './src/Screens/Home';
-import dummy from './assets/data/dummy';
-import Searchresult from './src/Screens/Searchresult';
-import HomeDetails from './src/Components/HouseDetails';
-import AreaSearch from './src/Screens/AreaSearch';
+import {withAuthenticator} from 'aws-amplify-react-native/dist/Auth';
 import Router from './src/Navigation/Router';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
@@ -28,4 +24,4 @@ const App: () => React$Node = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
