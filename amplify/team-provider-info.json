@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "testproject100abe58": {}
+      },
+      "api": {
+        "testproject": {}
       }
     }
   }
