@@ -18,6 +18,6 @@ export default [
   },
   {
     id: '4',
-    description: 'Self Contained Apartments',
+    description: 'Self Contained Apartments ',
   },
 ];
