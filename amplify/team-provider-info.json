@@ -19,5 +19,26 @@
         "testproject": {}
       }
     }
+  },
+  "vs": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-testproject-vs-121136-authRole",
+      "UnauthRoleArn": "arn:aws:iam::462224932960:role/amplify-testproject-vs-121136-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::462224932960:role/amplify-testproject-vs-121136-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-testproject-vs-121136-deployment",
+      "UnauthRoleName": "amplify-testproject-vs-121136-unauthRole",
+      "StackName": "amplify-testproject-vs-121136",
+      "StackId": "arn:aws:cloudformation:sa-east-1:462224932960:stack/amplify-testproject-vs-121136/e00a94f0-747c-11ed-9cb6-061af50d8be6",
+      "AmplifyAppId": "d26yq1ai40okdg"
+    },
+    "categories": {
+      "auth": {
+        "testproject100abe58": {}
+      },
+      "api": {
+        "testproject": {}
+      }
+    }
   }
 }
