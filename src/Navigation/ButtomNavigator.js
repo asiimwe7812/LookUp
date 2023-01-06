@@ -9,6 +9,7 @@ import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import HomeScreen from '../Screens/Home';
 import Profile from '../Screens/Profile';
 import MessagesScreen from '../Screens/Messaging';
+import Messaging from '../Screens/Messaging';
 const Tab = createBottomTabNavigator();
 const ButtonNavigator = props => {
   return (
@@ -28,7 +29,7 @@ const ButtonNavigator = props => {
       />
       <Tab.Screen
         name={'Message'}
-        component={MessagesScreen}
+        component={Messaging}
         options={{
           tabBarIcon: ({color: string}) => (
             <Feather name="message-square" size={25} color={'orange'} />

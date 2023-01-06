@@ -1,12 +1,36 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useState } from "react";
+import { View, Text } from "react-native";
 
-const messaging = () => {
-  return (
-    <View>
-      <Text>messaging</Text>
-    </View>
-  )
-}
+import ChatHeader from "../Components/messages/Chatheader"
+import ChatInput from "../Components/messages/Chatinput";
+import MessagesList from "../Components/messages/MessageList";
 
-export default messaging
+const Messaging = ({ navigation, route }) => {
+	const { username, bio, picture, isBlocked, isMuted } = route.params;
+	const [reply, setReply] = useState("");
+	const [isLeft, setIsLeft] = useState();
+
+	const swipeToReply = (message, isLeft) => {
+		setReply(message.length > 50 ? message.slice(0, 50) + '...' : message);
+		setIsLeft(isLeft);
+	};
+
+	const closeReply = () => {
+		setReply("");
+	};
+
+	return (
+		<View style={{ flex: 1 }}>
+			<ChatHeader
+				onPress={() => {}}
+				username={username}
+				picture={picture}
+				onlineStatus={'Online'}
+			/>
+			<MessagesList onSwipeToReply={swipeToReply} />
+			<ChatInput reply={reply} isLeft={isLeft} closeReply={closeReply} username={username} />
+		</View>
+	);
+};
+
+export default Messaging;
