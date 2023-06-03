@@ -8,7 +8,6 @@ import Feather from 'react-native-vector-icons/Feather';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import HomeScreen from '../Screens/Home';
 import Profile from '../Screens/Profile';
-import MessagesScreen from '../Screens/Messaging';
 import Messaging from '../Screens/Messaging';
 const Tab = createBottomTabNavigator();
 const ButtonNavigator = props => {

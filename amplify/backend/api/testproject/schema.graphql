@@ -11,9 +11,9 @@ type NewPlaces @model {
   description: String
   bed: Int!
   bedroom: Int
-  oldPrice: Int
-  newPrice: Int
-  totalPrice: Int!
+  oldPrice: Float
+  newPrice: Float
+  totalPrice: Float!
   latitude: Float
   longitude: Float
 }
